@@ -48,23 +48,45 @@ main{
   flex-direction: row;
   justify-content: space-evenly;
 
+  i.fa.fa-arrow-circle-left:hover {
+    //font-size: 8em;
+    //opacity: .3;
+    color:#bf4b4b;
+  }
+
+  h1{
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  hr{
+    width: 100%;
+    border-top: 2px dashed #a0a0a0;
+  }
+
   div{
     display: flex;
     flex-direction: column;
     width: 30%;
     padding: 5px 20px;
-    border: 1px solid red;
     min-width: 250px;
     min-height: 300px;
     height: calc(100vh - 345px);
     margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 11px;
 
     form {
       display: flex;
       flex-direction: column;
     }
-
   }
+
+  input[type="button"] {
+    margin-top: 25px;
+  }
+
   header{
     display: flex;
     justify-content: space-between;

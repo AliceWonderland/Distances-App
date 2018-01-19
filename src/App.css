@@ -2369,20 +2369,34 @@ main {
   flex-direction: row;
   justify-content: space-evenly; }
 
+main i.fa.fa-arrow-circle-left:hover {
+  color: #bf4b4b; }
+
+main h1 span {
+  font-size: 1.5rem; }
+
+main hr {
+  width: 100%;
+  border-top: 2px dashed #a0a0a0; }
+
 main div {
   display: flex;
   flex-direction: column;
   width: 30%;
   padding: 5px 20px;
-  border: 1px solid red;
   min-width: 250px;
   min-height: 300px;
   height: calc(100vh - 345px);
-  margin-top: 30px; }
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  border-radius: 11px; }
 
 main div form {
   display: flex;
   flex-direction: column; }
+
+main input[type="button"] {
+  margin-top: 25px; }
 
 main header {
   display: flex;

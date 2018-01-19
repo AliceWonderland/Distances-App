@@ -11,6 +11,7 @@ I chose Webpack Dev Server and Fetch API to try out for this demo.
 * https://github.com/facebook/react
 
 **React-Redux (maybe)**
+https://redux.js.org/
 
 **Babel**
 * https://babeljs.io/docs/plugins/
