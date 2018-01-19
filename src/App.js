@@ -79,18 +79,22 @@ class App extends Component {
 		return (
 			<div className="App">
 				<header className="App-header">
-					<i className="fa fa-shopping-basket fa-6" aria-hidden="true"></i>
+					<i className="fa fa-car fa-6" aria-hidden="true"></i>
 					<h1 className="App-title">Hello, Distances!</h1>
 				</header>
 				<main>
+					<div>
 					<h1>How Long Is The Drive?</h1>
 					<hr/>
 					<form>
+						Origin:
 						<input type="text" name="ipOrigin" onChange={this.handleChange} defaultValue={this.state.ipOrigin} />
+						Desination:
 						<input type="text" name="ipDest" 	onChange={this.handleChange} defaultValue={this.state.ipDest} />
-						<input type="button" value="Calculate Distance" onClick={this.handleClick}/>
+						<input type="button" value="Calculate" onClick={this.handleClick}/>
 					</form>
 					<p>Show my distance</p>
+					</div>
 				</main>
 			</div>
 		);

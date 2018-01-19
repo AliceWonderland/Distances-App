@@ -2330,8 +2330,67 @@
   overflow: visible;
   clip: auto; }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+
+.App .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App .App-header {
+  background-color: #222;
+  height: 186px;
+  padding: 20px;
+  color: white; }
+
+.App .App-title {
+  font-size: 1.5em; }
+
+.App .App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 header {
   text-align: center; }
 
-header i.fa.fa-shopping-basket.fa-6 {
+header i.fa.fa-car.fa-6 {
   font-size: 8em; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+main div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 5px 20px;
+  border: 1px solid red;
+  min-width: 250px;
+  min-height: 300px;
+  height: calc(100vh - 345px);
+  margin-top: 30px; }
+
+main div form {
+  display: flex;
+  flex-direction: column; }
+
+main header {
+  display: flex;
+  justify-content: space-between; }
+
+main header .clearBasket {
+  color: red;
+  opacity: .3; }
+
+main header .clearBasket:hover {
+  opacity: 1; }
