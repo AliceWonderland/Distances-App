@@ -1,7 +1,7 @@
 # Distances App
 Find the distance between two IPs
 
-This mini app uses Google's Distance Matrix API to calculate distances between geolocations and FreeGeoIP API to convert IP Addresses to geo coordinates.
+This mini React app uses Google's Distance Matrix API to calculate distances between geolocations and FreeGeoIP API to convert IP Addresses to geo coordinates. Vanilla React using State Lifting to manage state.
 
 I chose Webpack Dev Server and Fetch API to try out for this demo.
 
@@ -11,12 +11,11 @@ I chose Webpack Dev Server and Fetch API to try out for this demo.
 * https://github.com/facebook/react
 
 **React-Redux (maybe)**
-https://redux.js.org/
+* https://redux.js.org/
 
 **Babel**
 * https://babeljs.io/docs/plugins/
 * React/Env/Stage-3
-
 
 **Webpack Dev Server**
 * https://github.com/webpack/webpack-dev-server
@@ -32,3 +31,13 @@ https://redux.js.org/
 
 **Google Distance Matrix API**
 * https://developers.google.com/maps/documentation/distance-matrix/
+
+**GraphQL** (not implemented)
+https://api.graphloc.com/graphql
+
+# Installation
+* `git clone https://github.com/AliceWonderland/Distances-App.git`
+* cd to Distances-App
+* `npm install`
+* `npm run start`
+* View on http://localhost:9000/
