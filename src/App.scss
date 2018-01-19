@@ -1,0 +1,12 @@
+$fa-font-path: "./font-awesome-4.7.0/fonts"; //must incl this to resolve fonts
+@import "./font-awesome-4.7.0/scss/font-awesome.scss";
+//@import './font-awesome-4.7.0/scss/font-awesome';
+
+header{
+  text-align: center;
+
+  i.fa.fa-shopping-basket.fa-6 {
+    font-size: 8em;
+  }
+}
+
