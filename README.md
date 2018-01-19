@@ -13,8 +13,9 @@ I chose Webpack Dev Server and Fetch API to try out for this demo.
 **React-Redux (maybe)**
 
 **Babel**
-* React/Env/Stage-3
 * https://babeljs.io/docs/plugins/
+* React/Env/Stage-3
+
 
 **Webpack Dev Server**
 * https://github.com/webpack/webpack-dev-server
