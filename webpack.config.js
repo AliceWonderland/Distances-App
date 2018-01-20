@@ -1,6 +1,6 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	// entry: './index.js', // assumes your entry point is the index.js in the root of your project folder
@@ -16,11 +16,11 @@ module.exports = {
 		filename: 'bundle.js' // './bundle.js' assumes your bundle.js will also be in the root of your project folder or path.resolve(__dirname, 'dist')
 		// use 'bundle.js', run npx webpack src/index.js dist/bundle.js, then use '[name].js' to create bundle, and run again. Then switch back to bundle.js and a single entry point
 	},
-	devtool: 'source-map',  // or inline-source-map
-	devServer: {
-		contentBase: './dist',
-		port: 9000
-	},
+	// devtool: 'source-map',  // or inline-source-map
+	// devServer: {
+	// 	contentBase: './dist',
+	// 	port: 9000
+	// },
 	module: {
 		rules: [
 			{
