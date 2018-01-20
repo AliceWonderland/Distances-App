@@ -11,3 +11,7 @@ const common = require('./webpack.config.js');
 		})
 	]
 });
+
+// static deploy with weird config
+// no reverse proxy port 9000
+// /build/ root
