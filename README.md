@@ -6,6 +6,7 @@ This mini React app uses Google's Distance Matrix API to calculate distances bet
 I chose Webpack Dev Server and Fetch API to try out for this demo.
 
 ![](https://github.com/AliceWonderland/Distances-App/blob/master/dist/distances.png)
+
 http://distances.alicechuang.com/
 
 # Packages
