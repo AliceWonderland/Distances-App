@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'whatwg-fetch';
 import Result from './Result';
-// import GroceryListLive from './GroceryListLive';
-// import BasketListLive from './BasketListLive';
+import Form from './Form';
 
 import './App.css';
 
@@ -11,55 +10,55 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state={
-			ipOrigin:'100.2.212.46',
-			ipDest:'174.138.48.238',
+			ipOrigin:'131.107.255.255',
+			ipDest:'8.8.8.8',
 			coords:[
 				{
-					"ip": "100.2.212.46",
+					"ip": "131.107.255.255",
 					"country_code": "US",
 					"country_name": "United States",
-					"region_code": "NY",
-					"region_name": "New York",
-					"city": "New York",
-					"zip_code": "10128",
-					"time_zone": "America/New_York",
-					"latitude": 40.7805,
-					"longitude": -73.9512,
-					"metro_code": 501
+					"region_code": "WA",
+					"region_name": "Washington",
+					"city": "Redmond",
+					"zip_code": "98052",
+					"time_zone": "America/Los_Angeles",
+					"latitude": 47.6801,
+					"longitude": -122.1206,
+					"metro_code": 819
 				},
 				{
-					"ip": "174.138.48.238",
+					"ip": "8.8.8.8",
 					"country_code": "US",
 					"country_name": "United States",
-					"region_code": "NY",
-					"region_name": "New York",
-					"city": "New York",
-					"zip_code": "10013",
-					"time_zone": "America/New_York",
-					"latitude": 40.7214,
-					"longitude": -74.0052,
-					"metro_code": 501
+					"region_code": "",
+					"region_name": "",
+					"city": "",
+					"zip_code": "",
+					"time_zone": "",
+					"latitude": 37.751,
+					"longitude": -97.822,
+					"metro_code": 0
 				}
 			],
 			distances:[
 				{
 					"destination_addresses": [
-						"62 6th Ave, New York, NY 10013, USA"
+						"8545 166th Ave NE, Redmond, WA 98052, USA"
 					],
 					"origin_addresses": [
-						"230 E 89th St, New York, NY 10128, USA"
+						"Unnamed Road, Mt Hope, KS 67108, USA"
 					],
 					"rows": [
 						{
 							"elements": [
 								{
 									"distance": {
-										"text": "8.3 mi",
-										"value": 13437
+										"text": "1,800 mi",
+										"value": 2896698
 									},
 									"duration": {
-										"text": "27 mins",
-										"value": 1629
+										"text": "1 day 2 hours",
+										"value": 94781
 									},
 									"status": "OK"
 								}
@@ -92,13 +91,14 @@ class App extends Component {
 	}
 
 	handleClick(e){
-		console.log(e.target);
+		console.log('click',e.target.value);
+		// e.preventDefault();
 		// validate
 		// check for numbers and . only
 		// show error msg
-
-		// set flag true
-		this.setState({showResult:true});
+		if(e.key == 'Enter' || e.target.value==='Calculate'){
+			this.setState({showResult:true});
+		}
 
 		// axios.get('https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592&key=AIzaSyBpgw0eU6ESBVl8ddw-FtVitFZIMeEOTjY',
 		//   {
@@ -157,14 +157,14 @@ class App extends Component {
 							  <hr/>
 							  <form>
 								  <h5>Origin:</h5>
-								  <input type="text" name="ipOrigin" onChange={this.handleChange} defaultValue={this.state.ipOrigin} />
+								  <input type="text" name="ipOrigin" onChange={this.handleChange} defaultValue={this.state.ipOrigin} onKeyPress={this.handleClick} />
 								  <h5>Desination:</h5>
-								  <input type="text" name="ipDest" onChange={this.handleChange} defaultValue={this.state.ipDest} />
+								  <input type="text" name="ipDest" onChange={this.handleChange} defaultValue={this.state.ipDest} onKeyPress={this.handleClick} />
 								  <input type="button" value="Calculate" onClick={this.handleClick} />
 							  </form>
 						  </div>
 					}
-
+					{/*<Form {...this.state} click={this.handleClick} change={this.handleChange} />*/}
 				</main>
 			</div>
 		);
@@ -174,9 +174,12 @@ class App extends Component {
 // AIzaSyBPFb3UwyWhtRQbTXLgmXVfIm6pqMhA4fQ
 //
 // distance matrix api key AIzaSyBpgw0eU6ESBVl8ddw-FtVitFZIMeEOTjY
+// change this later
 
 // ip address to lat/long
 // http://freegeoip.net/json/100.2.212.46
+
+// google distance api
 // https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592&key=AIzaSyBpgw0eU6ESBVl8ddw-FtVitFZIMeEOTjY
 
 export default App;
