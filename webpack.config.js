@@ -99,5 +99,5 @@ module.exports = {
 // 	  libraryTarget: "umd", // universal module definition
 // 	// the type of the exported library
 //
-// 	/* Advanced output configuration (click to show) */
+// 	/* Advanced output configuration [click to show] */
 // },
